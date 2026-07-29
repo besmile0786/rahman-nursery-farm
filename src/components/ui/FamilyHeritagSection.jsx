@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Phone, MessageCircle, MapPin, Bone, Leaf, TreePine, ShieldCheck } from 'lucide-react';
+import { Heart, Phone, MessageCircle, MapPin, Building2, ShieldCheck, Award, FileCheck } from 'lucide-react';
 
 export const FamilyHeritagSection = ({ onOpenContact }) => {
 
@@ -15,9 +15,9 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
     },
     {
       name: 'Muhammad Rafiq',
-      role: 'Co-Owner & Farm Operations Manager',
+      role: 'Co-Owner & Cassia Nodosa Specialist',
       urdu: 'محمد رفیق',
-      note: 'Son of Muhammad Shareef (Late). Muhammad Rafiq oversees the day-to-day nursery operations — from plant growing cycles, soil preparation, and stock management to regional supply across Arifwala, Sahiwal, and Pakpattan.',
+      note: 'Son of Muhammad Shareef (Late). Master cultivator specializing in Cassia Nodosa (Pink Shower Tree) of all sizes and heights, along with managing day-to-day nursery growing cycles across Arifwala, Sahiwal, and Pakpattan.',
       icon: '🌿',
     },
     {
@@ -34,25 +34,31 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
   const nextGen = [
     {
       name: 'Bashart Saleem',
-      role: 'Nursery Manager — Arifwala & Sahiwal Region',
+      role: 'Physical Nursery Branch Manager — Qaboola & Arifwala',
       urdu: 'بشارت سلیم',
       phone: '0344-5155160',
-      icon: '🌳',
+      icon: '🏡',
+      address: 'Barakt Chowk, Opposite Royal Palm City, Qaboola',
+      note: 'Manages physical nursery operations, walk-in customers, and plant stock at the Qaboola / Royal Palm City branch.',
     },
     {
       name: 'Kashir Saleem',
-      role: 'Nursery Operations — Plant Supply & Dispatch',
+      role: 'Physical Nursery Branch Manager — Pakpattan Road',
       urdu: 'کاشر سلیم',
       phone: '0304-1001600',
-      icon: '🌳',
+      icon: '🏡',
+      address: 'Ada 17 Wali Puli, Pakpattan Rd, near Al-Madni Cotton Mill, Arifwala (57450)',
+      note: 'Manages plant supply, nursery dispatch, and physical sales at the main Pakpattan Road Ada 17 branch in Arifwala.',
     },
     {
       name: 'Ansar Hussain',
-      role: 'Online Sales & Nationwide Delivery Manager',
+      role: 'Online Sales & Digital Delivery Manager',
       urdu: 'انصر حسین',
       phone: '03040450065',
       icon: '📱',
       highlight: true,
+      address: 'Main Head Farm: Chak Hassan Arain (Online Dispatch)',
+      note: 'Manages all website orders, digital customer inquiries, online plant dispatches, and nationwide truck deliveries.',
     },
   ];
 
@@ -131,8 +137,6 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
                   an accidental fracture or broken bone, they would come to Baba Shareef.
                   With steady hands, deep knowledge, and Allah's blessing, he would carefully
                   set, splint, and heal broken bones — without a hospital or surgery.
-                  This rare gift made him one of the most beloved and trusted figures in
-                  Chak Hassan Arain.
                 </p>
 
                 <p className="text-sm text-sage-800 leading-relaxed font-semibold">
@@ -178,7 +182,7 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
                 <div className="bg-white border border-cream-200 rounded-2xl p-4 flex items-start gap-3 shadow-sm">
                   <MapPin className="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs font-extrabold text-emerald-800 uppercase tracking-wide mb-0.5">Farm Location</p>
+                    <p className="text-xs font-extrabold text-emerald-800 uppercase tracking-wide mb-0.5">Main Head Farm</p>
                     <p className="text-xs text-sage-700 font-semibold">
                       Chak Hassan Arain, Arifwala, District Pakpattan, Punjab, Pakistan
                     </p>
@@ -233,11 +237,11 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
           </div>
         </div>
 
-        {/* ─── NEXT GENERATION ─── */}
-        <div>
+        {/* ─── NEXT GENERATION & BRANCH MANAGERS ─── */}
+        <div className="mb-12">
           <h3 className="font-serif text-lg font-bold text-sage-700 mb-5 flex items-center gap-2">
             <span className="w-8 h-0.5 bg-emerald-500 rounded-full inline-block" />
-            Next Generation — Currently Running Nursery Operations
+            Next Generation — Running Physical Nurseries & Online Delivery
             <span className="w-8 h-0.5 bg-emerald-500 rounded-full inline-block" />
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -248,32 +252,44 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.12, duration: 0.5 }}
-                className={`rounded-2xl p-5 border flex flex-col gap-3 ${
+                className={`rounded-2xl p-5 border flex flex-col justify-between gap-4 ${
                   member.highlight
                     ? 'bg-gradient-to-br from-emerald-50 to-amber-50 border-emerald-400 shadow-md text-sage-900'
                     : 'bg-white border-cream-200 shadow-sm'
                 }`}
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{member.icon}</span>
-                  <div>
-                    <h4 className="font-serif font-bold text-base leading-tight text-sage-900">
-                      {member.name}
-                    </h4>
-                    <p className="text-[11px] font-bold uppercase tracking-wide mt-0.5 text-emerald-800">
-                      {member.role}
-                    </p>
-                    <p className="text-[11px] font-semibold text-sage-500">
-                      {member.urdu}
-                    </p>
+                <div>
+                  <div className="flex items-start gap-3 mb-2">
+                    <span className="text-2xl">{member.icon}</span>
+                    <div>
+                      <h4 className="font-serif font-bold text-base leading-tight text-sage-900">
+                        {member.name}
+                      </h4>
+                      <p className="text-[11px] font-bold uppercase tracking-wide mt-0.5 text-emerald-800">
+                        {member.role}
+                      </p>
+                      <p className="text-[11px] font-semibold text-sage-400">
+                        {member.urdu}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-sage-700 leading-relaxed font-medium mb-3">
+                    {member.note}
+                  </p>
+
+                  <div className="flex items-start gap-1.5 text-xs text-sage-800 font-bold bg-cream-50 p-2.5 rounded-xl border border-cream-200">
+                    <MapPin className="w-4 h-4 text-emerald-700 flex-shrink-0 mt-0.5" />
+                    <span>{member.address}</span>
                   </div>
                 </div>
+
                 {member.phone && (
                   <a
                     href={`https://wa.me/92${member.phone.replace(/^0/, '').replace(/-/g, '')}?text=${encodeURIComponent('Assalam o Alaikum, I am contacting from Rahman Nursery Farm website.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm w-full justify-center"
                   >
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp: {member.phone}
@@ -283,6 +299,53 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
             ))}
           </div>
         </div>
+
+        {/* ─── GOVERNMENT & LARGE SCALE ENTERPRISE PROJECTS ─── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-10 bg-gradient-to-br from-emerald-800 via-emerald-900 to-sage-900 rounded-3xl p-6 md:p-10 text-white shadow-xl relative overflow-hidden"
+        >
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-300 text-xs font-black uppercase tracking-widest border border-gold-400/30 mb-3">
+                <Building2 className="w-4 h-4" />
+                <span>GOVERNMENT & MEGA ENTERPRISE CONTRACTS</span>
+              </div>
+              <h3 className="font-serif text-2xl md:text-4xl font-bold mb-3">
+                Mega Scale Government & Commercial Landscaping
+              </h3>
+              <p className="text-sm text-emerald-100 leading-relaxed font-semibold mb-4">
+                Hum nay <strong className="text-gold-300 font-extrabold">Government kay bhi projects kafi bary scale par successfully complete kiye hain</strong>. 
+                Highway greenbelts, government parks, housing schemes, industrial estates, aur mega commercial landscape contracts ke liye hum se rabta krain. Large-scale sapling supply, crane tree planting, aur full site execution available hai.
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs text-emerald-200 font-bold">
+                <span className="bg-emerald-700/60 px-3 py-1 rounded-lg border border-emerald-500/40">✓ Govt Project Certified</span>
+                <span className="bg-emerald-700/60 px-3 py-1 rounded-lg border border-emerald-500/40">✓ Highway & Belt Planting</span>
+                <span className="bg-emerald-700/60 px-3 py-1 rounded-lg border border-emerald-500/40">✓ 10,000+ Bulk Sapling Supply</span>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-center">
+              <FileCheck className="w-10 h-10 text-gold-300 mx-auto mb-2" />
+              <h4 className="font-serif font-bold text-lg mb-1">Large Scale Tenders & Projects</h4>
+              <p className="text-xs text-emerald-200 mb-4 font-semibold">
+                Contact Ansar Hussain for Govt Tenders & Commercial Quotations
+              </p>
+              <a
+                href="https://wa.me/923040450065?text=Assalam%20o%20Alaikum%20Ansar%20Bhai%2C%20mujhe%20Government%20%2F%20Large%20Scale%20Commercial%20Landscaping%20project%20ke%20silsile%20mein%20rabta%20karna%20hai."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-luxury-gold px-6 py-3 rounded-xl text-xs font-extrabold text-sage-900 inline-flex items-center gap-2 w-full justify-center shadow-lg"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Govt Project Inquiry: 03040450065
+              </a>
+            </div>
+          </div>
+        </motion.div>
 
         {/* ─── BOTTOM CTA ─── */}
         <motion.div
@@ -315,7 +378,7 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
               onClick={onOpenContact}
               className="px-6 py-3 rounded-2xl text-sm font-extrabold text-sage-900 bg-white border border-emerald-300 hover:bg-emerald-50 transition-all shadow-sm"
             >
-              View All Contacts
+              View All Contacts & Branches
             </button>
           </div>
         </motion.div>
