@@ -266,6 +266,27 @@ export const PLANTS_DATA = [
     careGuide: ['Extremely hardy in Sahiwal and Pakpattan soil.']
   },
   {
+    id: 'china-guava-grafted',
+    name: 'China Guava Grafted Sapling (چائنا امرود)',
+    category: 'fruit',
+    latinName: 'Psidium guajava (China)',
+    pricePKR: 1500,
+    rating: 5.0,
+    reviewsCount: 185,
+    badge: '🍐 #1 Bestselling Amrood',
+    description: 'Special China Guava (چائنا امرود) — Pakistan\'s top commercial guava variety. Produces exceptionally large, crisp, sweet guavas with small seeds and high market price.',
+    sunlight: 'Full Sun',
+    watering: 'Moderate',
+    height: '4 – 10 ft',
+    airPurifying: 94,
+    difficulty: 'Very Easy',
+    petFriendly: true,
+    origin: 'Arifwala, Punjab, Pakistan',
+    colorTheme: '#689F38',
+    growthTimeline: { '1 Year': '3 ft fruiting sapling.', '3 Years': '6 ft mature China Guava tree.' },
+    careGuide: ['High yield crop. Ideal for commercial orchards and home gardens.']
+  },
+  {
     id: 'pomegranate-anar-grafted',
     name: 'Grafted Pomegranate Sapling (Kandhari Anar)',
     category: 'fruit',
@@ -1223,14 +1244,14 @@ export const FREQUENTLY_ASKED_QUESTIONS = [
 // ============================================================
 export const ORCHARD_SERVICES = [
   {
-    id: 'amrood-bagh-chain-guava',
-    title: 'Chain Guava (Amrood) Bagh — Per Acre Planting',
-    urdu: 'زنجیر امرود باغ',
+    id: 'amrood-bagh-china-guava',
+    title: 'China Guava (Amrood) Bagh — Per Acre Planting',
+    urdu: 'چائنا امرود باغ',
     emoji: '🍐',
     color: '#558B2F',
     pricePerAcre: 85000,
-    description: 'Full turn-key Chain Guava orchard planting per acre. Includes premium Chain Guava grafted saplings, soil preparation, layout design, initial fertilization, and planting by our expert team. Chain Guava (Zanjeer Amrood) produces large, sweet, crispy fruits with excellent shelf life — very high market demand in Pakistan.',
-    varieties: ['Chain Guava (Zanjeer Amrood)', 'Surahi Amrood', 'Safeda Amrood', 'Gola Amrood'],
+    description: 'Full turn-key China Guava orchard planting per acre. Includes premium China Guava grafted saplings, soil preparation, layout design, initial fertilization, and planting by our expert team. China Guava (چائنا امرود) produces large, sweet, crispy fruits with excellent shelf life — very high market demand in Pakistan.',
+    varieties: ['China Guava (چائنا امرود)', 'Surahi Amrood', 'Safeda Amrood', 'Gola Amrood'],
     saplingCount: '200–250 saplings per acre',
     spacing: '20 × 20 feet standard spacing',
     firstFruit: '18–24 months after planting',
@@ -1239,7 +1260,7 @@ export const ORCHARD_SERVICES = [
     includes: [
       'Site visit & soil testing',
       'Layout marking & bed preparation',
-      'Premium grafted Chain Guava saplings',
+      'Premium grafted China Guava saplings',
       'Initial organic fertilizer application (Khal)',
       'First 3 months irrigation guidance',
       'Free follow-up visit after 30 days',

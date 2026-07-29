@@ -250,20 +250,20 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
                 transition={{ delay: idx * 0.12, duration: 0.5 }}
                 className={`rounded-2xl p-5 border flex flex-col gap-3 ${
                   member.highlight
-                    ? 'bg-gradient-to-br from-emerald-700 to-emerald-900 border-emerald-600 shadow-xl text-white'
+                    ? 'bg-gradient-to-br from-emerald-50 to-amber-50 border-emerald-400 shadow-md text-sage-900'
                     : 'bg-white border-cream-200 shadow-sm'
                 }`}
               >
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{member.icon}</span>
                   <div>
-                    <h4 className={`font-serif font-bold text-base leading-tight ${member.highlight ? 'text-white' : 'text-sage-900'}`}>
+                    <h4 className="font-serif font-bold text-base leading-tight text-sage-900">
                       {member.name}
                     </h4>
-                    <p className={`text-[11px] font-bold uppercase tracking-wide mt-0.5 ${member.highlight ? 'text-emerald-200' : 'text-emerald-700'}`}>
+                    <p className="text-[11px] font-bold uppercase tracking-wide mt-0.5 text-emerald-800">
                       {member.role}
                     </p>
-                    <p className={`text-[11px] font-semibold ${member.highlight ? 'text-emerald-300' : 'text-sage-400'}`}>
+                    <p className="text-[11px] font-semibold text-sage-500">
                       {member.urdu}
                     </p>
                   </div>
@@ -273,11 +273,7 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
                     href={`https://wa.me/92${member.phone.replace(/^0/, '').replace(/-/g, '')}?text=${encodeURIComponent('Assalam o Alaikum, I am contacting from Rahman Nursery Farm website.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all ${
-                      member.highlight
-                        ? 'bg-white text-emerald-800 hover:bg-cream-50'
-                        : 'bg-emerald-600 text-white hover:bg-emerald-700'
-                    }`}
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm"
                   >
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp: {member.phone}
@@ -294,14 +290,14 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-10 bg-gradient-to-r from-sage-900 to-emerald-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-white shadow-xl"
+          className="mt-10 bg-gradient-to-r from-emerald-100 via-amber-50 to-emerald-100 border border-emerald-300 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sage-900 shadow-md"
         >
           <div>
-            <h3 className="font-serif text-xl md:text-2xl font-bold mb-1">
+            <h3 className="font-serif text-xl md:text-2xl font-bold mb-1 text-sage-900">
               30+ Years of Botanical Excellence
             </h3>
-            <p className="text-sm text-emerald-200 font-semibold">
-              Main Farm: <strong className="text-white">Chak Hassan Arain</strong> —
+            <p className="text-sm text-sage-700 font-semibold">
+              Main Farm: <strong className="text-emerald-900">Chak Hassan Arain</strong> —
               Serving Lahore, Arifwala, Sahiwal, Pakpattan & All Pakistan
             </p>
           </div>
@@ -310,14 +306,14 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
               href="https://wa.me/923040450065?text=Assalam%20o%20Alaikum%2C%20I%20visited%20Rahman%20Nursery%20Farm%20website%20and%20want%20to%20place%20a%20plant%20order!"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-luxury-gold px-6 py-3 rounded-2xl text-sm font-extrabold flex items-center gap-2 text-sage-900"
+              className="btn-luxury-gold px-6 py-3 rounded-2xl text-sm font-extrabold flex items-center gap-2 text-sage-900 shadow-md"
             >
               <MessageCircle className="w-4 h-4" />
               Ansar Hussain: 03040450065
             </a>
             <button
               onClick={onOpenContact}
-              className="glass-panel px-6 py-3 rounded-2xl text-sm font-extrabold text-white border border-white/30 hover:bg-white/10 transition-all"
+              className="px-6 py-3 rounded-2xl text-sm font-extrabold text-sage-900 bg-white border border-emerald-300 hover:bg-emerald-50 transition-all shadow-sm"
             >
               View All Contacts
             </button>

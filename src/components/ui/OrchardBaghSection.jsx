@@ -197,15 +197,15 @@ Shukriya — Rahman Nursery Farm website`;
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-10 bg-gradient-to-r from-emerald-800 to-sage-900 rounded-3xl p-6 md:p-8 text-white text-center shadow-xl"
+          className="mt-10 bg-gradient-to-r from-emerald-100 via-amber-50 to-emerald-100 border border-emerald-300 rounded-3xl p-6 md:p-8 text-sage-900 text-center shadow-md"
         >
           <div className="text-3xl mb-3">🌳🍊🥭🍐❤️</div>
-          <h3 className="font-serif text-xl md:text-2xl font-bold mb-2">
+          <h3 className="font-serif text-xl md:text-2xl font-bold mb-2 text-sage-900">
             Custom Bagh / Mixed Orchard Planning Available
           </h3>
-          <p className="text-sm text-emerald-200 font-semibold max-w-xl mx-auto mb-5">
-            Want a mix of Amrood + Mango + Kinnu on your land? We design{' '}
-            <strong className="text-white">custom mixed orchards</strong> tailored to your soil,
+          <p className="text-sm text-sage-700 font-semibold max-w-xl mx-auto mb-5">
+            Want a mix of China Guava + Mango + Kinnu on your land? We design{' '}
+            <strong className="text-emerald-800 font-extrabold">custom mixed orchards</strong> tailored to your soil,
             water, and budget. Free site visit for orders above 2 acres.
           </p>
           <a
