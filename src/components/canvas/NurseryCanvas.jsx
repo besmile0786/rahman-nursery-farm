@@ -15,7 +15,7 @@ export const NurseryCanvas = ({
 }) => {
   return (
     // Background div matches WeatherLighting sunrise default; JS will update via Three.js
-    <div className="fixed inset-0 w-full h-full z-0 pointer-events-auto bg-[#D4EBC4]">
+    <div className="fixed inset-0 w-full h-full z-0 pointer-events-auto bg-[#F4F9F5]">
       <Canvas
         shadows
         camera={{ position: [0, 2.5, 12], fov: 50 }}

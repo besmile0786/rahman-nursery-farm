@@ -1,101 +1,100 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 
 export const WeatherLighting = ({ weatherMode = 'sunrise' }) => {
   const sunLightRef = useRef();
 
-  // ULTRA-LIGHT warm palette — all weather modes are bright & airy
+  // SUPER BRIGHT PRISTINE LIGHT PALETTE — NO DARKNESS
   let config = {
-    skyColor:         '#E8F5E9',   // Very light mint green — day mode
-    fogColor:         '#F1F8F2',
-    fogNear:          40,
-    fogFar:           100,
-    sunColor:         '#FFF9E6',
-    sunIntensity:     4.0,
-    sunPosition:      [30, 45, 20],
-    ambientColor:     '#D4EDDA',
-    ambientIntensity: 2.0,
+    skyColor:         '#F4F9F5',   // Crystal bright white-green sky
+    fogColor:         '#F8FCF9',
+    fogNear:          55,
+    fogFar:           140,
+    sunColor:         '#FFFFFF',
+    sunIntensity:     5.0,
+    sunPosition:      [30, 55, 25],
+    ambientColor:     '#FFFFFF',
+    ambientIntensity: 2.8,
     fillColor:        '#FFFFFF',
-    fillIntensity:    1.5,
+    fillIntensity:    2.2,
   };
 
   switch (weatherMode) {
     case 'afternoon':
       config = {
-        skyColor:         '#E3F2FD',   // Very light sky blue
-        fogColor:         '#EBF5FE',
-        fogNear:          45,
-        fogFar:           110,
+        skyColor:         '#EBF5FB',   // Crystal light blue sky
+        fogColor:         '#F2F8FD',
+        fogNear:          60,
+        fogFar:           150,
         sunColor:         '#FFFFFF',
-        sunIntensity:     4.5,
-        sunPosition:      [0, 65, 10],
-        ambientColor:     '#E8F4FD',
+        sunIntensity:     5.5,
+        sunPosition:      [0, 70, 15],
+        ambientColor:     '#FFFFFF',
+        ambientIntensity: 3.0,
+        fillColor:        '#FFFFFF',
+        fillIntensity:    2.5,
+      };
+      break;
+    case 'golden':
+      config = {
+        skyColor:         '#FFFDF5',   // Bright warm ivory sky
+        fogColor:         '#FFFBF0',
+        fogNear:          50,
+        fogFar:           130,
+        sunColor:         '#FFF0B5',
+        sunIntensity:     5.0,
+        sunPosition:      [40, 25, -20],
+        ambientColor:     '#FFFDF0',
+        ambientIntensity: 2.6,
+        fillColor:        '#FFFFFF',
+        fillIntensity:    2.0,
+      };
+      break;
+    case 'rain':
+      config = {
+        skyColor:         '#F0F4F8',   // Bright pearl overcast
+        fogColor:         '#F5F8FA',
+        fogNear:          40,
+        fogFar:           100,
+        sunColor:         '#E3EDF7',
+        sunIntensity:     3.5,
+        sunPosition:      [15, 45, 15],
+        ambientColor:     '#F5F8FA',
         ambientIntensity: 2.2,
         fillColor:        '#FFFFFF',
         fillIntensity:    1.8,
       };
       break;
-    case 'golden':
-      config = {
-        skyColor:         '#FFF8E1',   // Warm golden hour — ivory yellow
-        fogColor:         '#FFF3CD',
-        fogNear:          35,
-        fogFar:           90,
-        sunColor:         '#FFC107',
-        sunIntensity:     4.2,
-        sunPosition:      [40, 18, -20],
-        ambientColor:     '#FFE57F',
-        ambientIntensity: 1.8,
-        fillColor:        '#FFD54F',
-        fillIntensity:    1.0,
-      };
-      break;
-    case 'rain':
-      config = {
-        skyColor:         '#ECEFF1',   // Light pearl grey — overcast
-        fogColor:         '#E0E7EE',
-        fogNear:          25,
-        fogFar:           65,
-        sunColor:         '#CFD8DC',
-        sunIntensity:     2.2,
-        sunPosition:      [15, 35, 15],
-        ambientColor:     '#ECEFF1',
-        ambientIntensity: 1.6,
-        fillColor:        '#F5F5F5',
-        fillIntensity:    1.2,
-      };
-      break;
     case 'night':
-      // Soft moonlit indigo — still somewhat lit, never pitch black
+      // Bright soft indigo moonlight — clear and lit
       config = {
-        skyColor:         '#263238',
-        fogColor:         '#1C2B36',
-        fogNear:          20,
-        fogFar:           55,
-        sunColor:         '#90CAF9',
-        sunIntensity:     1.8,
-        sunPosition:      [-25, 35, -20],
-        ambientColor:     '#455A64',
-        ambientIntensity: 1.1,
-        fillColor:        '#80DEEA',
-        fillIntensity:    0.6,
+        skyColor:         '#37474F',
+        fogColor:         '#263238',
+        fogNear:          30,
+        fogFar:           80,
+        sunColor:         '#B2EBF2',
+        sunIntensity:     2.5,
+        sunPosition:      [-25, 45, -20],
+        ambientColor:     '#607D8B',
+        ambientIntensity: 1.8,
+        fillColor:        '#E0F7FA',
+        fillIntensity:    1.2,
       };
       break;
     case 'sunrise':
     default:
       config = {
-        skyColor:         '#E8F5E9',
-        fogColor:         '#F1F8F2',
-        fogNear:          40,
-        fogFar:           100,
-        sunColor:         '#FFE082',
-        sunIntensity:     4.0,
-        sunPosition:      [30, 45, 20],
-        ambientColor:     '#D4EDDA',
-        ambientIntensity: 2.0,
+        skyColor:         '#F4F9F5',
+        fogColor:         '#F8FCF9',
+        fogNear:          55,
+        fogFar:           140,
+        sunColor:         '#FFFFFF',
+        sunIntensity:     5.0,
+        sunPosition:      [30, 55, 25],
+        ambientColor:     '#FFFFFF',
+        ambientIntensity: 2.8,
         fillColor:        '#FFFFFF',
-        fillIntensity:    1.5,
+        fillIntensity:    2.2,
       };
       break;
   }
@@ -120,25 +119,25 @@ export const WeatherLighting = ({ weatherMode = 'sunrise' }) => {
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
         shadow-camera-near={0.1}
-        shadow-camera-far={80}
-        shadow-camera-left={-22}
-        shadow-camera-right={22}
-        shadow-camera-top={22}
-        shadow-camera-bottom={-22}
+        shadow-camera-far={100}
+        shadow-camera-left={-30}
+        shadow-camera-right={30}
+        shadow-camera-top={30}
+        shadow-camera-bottom={-30}
       />
 
       {/* Soft fill from opposite side — removes dark undersides */}
       <directionalLight
-        position={[-20, 15, -20]}
+        position={[-20, 20, -20]}
         intensity={config.fillIntensity}
         color={config.fillColor}
       />
 
-      {/* Warm ambient base */}
+      {/* Super bright ambient base */}
       <ambientLight intensity={config.ambientIntensity} color={config.ambientColor} />
 
       {/* Hemisphere sky-to-ground gradient */}
-      <hemisphereLight skyColor={config.skyColor} groundColor="#4CAF50" intensity={1.0} />
+      <hemisphereLight skyColor={config.skyColor} groundColor="#81C784" intensity={1.5} />
     </>
   );
 };
