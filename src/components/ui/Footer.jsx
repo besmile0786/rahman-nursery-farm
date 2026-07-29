@@ -17,7 +17,7 @@ export const Footer = ({ onOpenCatalog, onOpenAIPlanner, onOpenContact }) => {
                 RAHMAN <span className="text-emerald-700">NURSERY</span>
               </span>
               <span className="text-[10px] tracking-widest text-emerald-800 font-extrabold uppercase block">
-                FARM — EST. 1994 • PAKISTAN
+                FARM — 50+ YEARS OF EXCELLENCE • PAKISTAN
               </span>
             </div>
           </div>

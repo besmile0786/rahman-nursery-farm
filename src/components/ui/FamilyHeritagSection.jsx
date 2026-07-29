@@ -70,15 +70,15 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
         >
           <div className="inline-flex items-center gap-2 text-xs font-extrabold text-gold-600 uppercase tracking-widest mb-2">
             <Heart className="w-4 h-4 fill-gold-500" />
-            <span>OUR FAMILY & FARM HERITAGE</span>
+            <span>Over 50 Years of Family & Farm Heritage</span>
           </div>
           <h2 className="font-serif text-3xl md:text-5xl font-bold text-sage-900 mb-3">
-            Three Generations of Nature's Legacy
+            50+ Years of Nature's Legacy
           </h2>
           <p className="text-sm text-sage-700 max-w-2xl mx-auto font-semibold leading-relaxed">
             Rooted in the soil of{' '}
             <span className="text-emerald-700 font-extrabold">Chak Hassan Arain</span> — 
-            our family has dedicated over 30 years to growing Pakistan's finest plants,
+            our family has dedicated over 50+ years to growing Pakistan's finest plants,
             nurturing trees, and building green landscapes across the nation.
           </p>
         </motion.div>
@@ -294,7 +294,7 @@ export const FamilyHeritagSection = ({ onOpenContact }) => {
         >
           <div>
             <h3 className="font-serif text-xl md:text-2xl font-bold mb-1 text-sage-900">
-              30+ Years of Botanical Excellence
+              50+ Years of Botanical Excellence
             </h3>
             <p className="text-sm text-sage-700 font-semibold">
               Main Farm: <strong className="text-emerald-900">Chak Hassan Arain</strong> —

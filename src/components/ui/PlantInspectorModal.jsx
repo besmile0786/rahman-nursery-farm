@@ -7,7 +7,8 @@ export const PlantInspectorModal = ({
   plant,
   activePotType,
   onPotChange,
-  onClose
+  onClose,
+  onAddToCart,
 }) => {
   const [selectedTimeline, setSelectedTimeline] = useState('1 Year');
   const [customerName, setCustomerName] = useState('');
@@ -234,13 +235,24 @@ export const PlantInspectorModal = ({
             </select>
           </div>
 
-          <button
-            onClick={handleOrderWhatsApp}
-            className="w-full btn-luxury-primary py-3.5 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xl"
-          >
-            <MessageCircle className="w-5 h-5 fill-white/20" />
-            Order on WhatsApp (0304-0450065)
-          </button>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <button
+              onClick={() => {
+                if (onAddToCart) onAddToCart(plant);
+              }}
+              className="flex-1 py-3.5 rounded-2xl text-sm font-extrabold flex items-center justify-center gap-2 bg-emerald-700 text-white hover:bg-emerald-800 transition-all shadow-md"
+            >
+              🛒 Add to Cart
+            </button>
+
+            <button
+              onClick={handleOrderWhatsApp}
+              className="flex-1 btn-luxury-primary py-3.5 rounded-2xl text-sm font-bold flex items-center justify-center gap-2 shadow-xl"
+            >
+              <MessageCircle className="w-5 h-5 fill-white/20" />
+              Order WhatsApp (03040450065)
+            </button>
+          </div>
         </div>
       </div>
     </div>

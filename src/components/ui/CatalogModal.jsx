@@ -24,7 +24,7 @@ const DIFFICULTY_COLOR = {
   'Advanced':'bg-red-100 text-red-800',
 };
 
-export const CatalogModal = ({ isOpen, onClose, onSelectPlantForInspection }) => {
+export const CatalogModal = ({ isOpen, onClose, onSelectPlantForInspection, onAddToCart }) => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -177,17 +177,23 @@ export const CatalogModal = ({ isOpen, onClose, onSelectPlantForInspection }) =>
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex items-center gap-2 pt-2 border-t border-cream-100">
+                  <div className="flex items-center gap-1.5 pt-2 border-t border-cream-100">
+                    <button
+                      onClick={() => onAddToCart && onAddToCart(plant)}
+                      className="flex-1 py-2 rounded-xl text-xs font-extrabold flex items-center justify-center gap-1 bg-emerald-600 text-white hover:bg-emerald-700 transition-colors shadow-sm"
+                    >
+                      🛒 Add to Cart
+                    </button>
+
                     <button
                       onClick={() => {
                         onClose();
                         onSelectPlantForInspection(plant.id);
                       }}
-                      className="flex-1 py-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 text-white transition-all hover:opacity-90"
-                      style={{ background: `linear-gradient(135deg, ${catColor.from}, ${catColor.to})` }}
+                      className="py-2 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-1 text-sage-800 bg-cream-100 hover:bg-cream-200 transition-all border border-cream-200"
                     >
                       <Eye className="w-3.5 h-3.5" />
-                      Inspect 3D
+                      3D
                     </button>
 
                     <a
